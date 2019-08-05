@@ -1,0 +1,12 @@
+@import '../../common/vars.scss';
+.song-list {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+.scrollbar {
+    width: 25px;
+}

@@ -1,17 +1,15 @@
 import React from 'react';
 import './App.scss';
-import SongCard from './components/common/SongCard';
-
+import SongList from './components/common/SongList';
+import NowPlaying from './components/NowPlaying/NowPlaying';
 function App() {
-    return (
-        <div className="App">
-            {Array(10)
-                .fill()
-                .map((elem, i) => {
-                    return <SongCard key={i} />;
-                })}
-        </div>
-    );
+  return (
+    <div className="App">
+      <SongList />
+
+      <NowPlaying />
+    </div>
+  );
 }
 
 export default App;
