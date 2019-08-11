@@ -1,13 +1,13 @@
 import React from 'react';
 import './App.scss';
-import SongList from './components/common/SongList';
-import NowPlaying from './components/NowPlaying/NowPlaying';
+import SongListContainer from './redux/containers/SongListContainer';
+import NowPlayingContainer from './redux/containers/NowPlayingContainer';
 function App() {
   return (
     <div className="App">
-      <SongList />
+      <SongListContainer />
 
-      <NowPlaying />
+      <NowPlayingContainer />
     </div>
   );
 }

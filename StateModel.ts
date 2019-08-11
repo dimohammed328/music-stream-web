@@ -24,4 +24,5 @@ export interface Song {
   title: string;
   artist: string;
   picture: string;
+  duration: string;
 }

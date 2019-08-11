@@ -7,11 +7,17 @@ export default class SongList extends Component {
     return (
       <Scrollbars hideTracksWhenNotNeeded={false} autoHide={true}>
         <div className="song-list">
-          {Array(50)
-            .fill()
-            .map((elem, i) => {
-              return <SongCard key={i} />;
-            })}
+          {this.props.songList.map(song => {
+            return (
+              <SongCard
+                title={song.title}
+                artist={song.artist}
+                id={song.id}
+                setCurrentSong={this.props.setCurrentSong}
+                key={song.id}
+              />
+            );
+          })}
         </div>
       </Scrollbars>
     );

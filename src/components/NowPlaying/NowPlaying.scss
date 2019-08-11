@@ -10,14 +10,45 @@
   justify-content: flex-start;
   align-items: center;
   border-top: 2px solid $peach;
-  img {
-    height: 80px;
-    width: 80px;
-    margin: 15px;
-    border-radius: 5px;
+  .info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 25%;
+    img {
+      height: 80px;
+      width: 80px;
+      margin: 15px;
+      border-radius: 5px;
+    }
+    .text {
+      font-family: $Montserrat;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      font-weight: lighter;
+      flex: 1;
+      &.title-artist {
+        margin-left: 25px;
+        flex: 1;
+      }
+      #time {
+        margin-right: 25px;
+      }
+      #title {
+        font-size: 20px;
+        height: 30px;
+        text-overflow: ellipsis;
+        width: 100%;
+        overflow: hidden;
+      }
+      #artist {
+        font-size: 16px;
+      }
+    }
   }
   .controls {
-    width: 70%;
+    width: 50%;
     display: flex;
     height: 100%;
     flex-direction: column;
@@ -31,28 +62,8 @@
       flex-direction: row;
     }
     .scrub-bar {
-      width: 80%;
+      width: 100%;
       min-width: 150px;
-    }
-  }
-  .text {
-    font-family: $Montserrat;
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-    font-weight: lighter;
-    &.title-artist {
-      margin-left: 25px;
-      flex: 1;
-    }
-    #time {
-      margin-right: 25px;
-    }
-    #title {
-      font-size: 20px;
-    }
-    #artist {
-      font-size: 16px;
     }
   }
 }
