@@ -2,6 +2,11 @@ import React, { Component } from 'react';
 import './NowPlaying.scss';
 import ScrubBar from './ScrubBar';
 import ReactCursorPosition from 'react-cursor-position';
+import Shuffle from './../assets/Shuffle';
+import SkipPrevious from './../assets/SkipPrevious';
+import Play from './../assets/Play';
+import SkipNext from './../assets/SkipNext';
+import Repeat from './../assets/Repeat';
 export default class NowPlaying extends Component {
   constructor(props) {
     super(props);
@@ -25,9 +30,18 @@ export default class NowPlaying extends Component {
           <div id="title">Track Name</div>
           <div id="artist">Artist</div>
         </div>
-        <ReactCursorPosition className="scrub-bar">
-          <ScrubBar scrub={this.scrub} percent={this.state.scrubPercent.toString()} />
-        </ReactCursorPosition>
+        <div className="controls">
+          <div className="buttons">
+            <Shuffle />
+            <SkipPrevious />
+            <Play />
+            <SkipNext />
+            <Repeat />
+          </div>
+          <ReactCursorPosition className="scrub-bar">
+            <ScrubBar scrub={this.scrub} percent={this.state.scrubPercent.toString()} />
+          </ReactCursorPosition>
+        </div>
       </div>
     );
   }
