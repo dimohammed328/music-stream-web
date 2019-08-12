@@ -6,6 +6,7 @@ const mapStateToProps = (state, ownProps) => {
   return {
     songList: state.songList,
     searchFilter: state.searchFilter,
+    type: 'SONG_LIST',
   };
 };
 

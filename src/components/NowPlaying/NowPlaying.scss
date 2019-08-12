@@ -28,21 +28,27 @@
       flex-direction: column;
       font-weight: lighter;
       flex: 1;
+      max-width: calc(100% - 110px);
       &.title-artist {
         margin-left: 25px;
         flex: 1;
       }
+      .overflowWrapper {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
       #time {
         margin-right: 25px;
       }
-      #title {
+      .title {
         font-size: 20px;
         height: 30px;
         text-overflow: ellipsis;
         width: 100%;
         overflow: hidden;
       }
-      #artist {
+      .artist {
         font-size: 16px;
       }
     }
@@ -61,9 +67,22 @@
       display: flex;
       flex-direction: row;
     }
-    .scrub-bar {
+    .scrub-bar-holder {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
       width: 100%;
+      margin-right: 15px;
+      margin-left: 15px;
+    }
+    .scrub-bar {
+      flex: 1;
       min-width: 150px;
+    }
+    .scrub-time {
+      margin-right: 10px;
+      margin-left: 10px;
     }
   }
 }

@@ -1,35 +1,40 @@
 @import '../../common/vars.scss';
 .row {
-    width: 80%;
-    background-color: transparent !important;
-    color: $peach !important;
-    height: 65px;
+  width: 90%;
+  background-color: transparent !important;
+  color: $peach !important;
+  min-height: 65px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  transition: background-color 0.5s ease;
+  .text {
+    font-family: $Montserrat;
+    text-align: left;
     display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    transition: background-color 0.5s ease;
-    .text {
-        font-family: $Montserrat;
-        text-align: left;
-        display: flex;
-        flex-direction: column;
-        font-weight: lighter;
-        &.title-artist {
-            margin-left: 25px;
-            flex: 1;
-        }
-        #time {
-            margin-right: 25px;
-        }
-        #title {
-            font-size: 20px;
-        }
-        #artist {
-            font-size: 16px;
-        }
+    flex-direction: column;
+    font-weight: lighter;
+    &.title-artist {
+      margin-left: 25px;
+      flex: 1;
     }
+    #time {
+      margin-right: 25px;
+    }
+    #title {
+      font-size: 20px;
+    }
+    #artist {
+      font-size: 16px;
+    }
+  }
+}
+.number {
+  font-size: 20px;
+  font-family: $Montserrat;
+  margin: 10px;
 }
 .row:hover {
-    background-color: rgba(0, 0, 0, 0.25) !important;
+  background-color: rgba(0, 0, 0, 0.25) !important;
 }

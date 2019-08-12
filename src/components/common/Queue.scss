@@ -1,0 +1,36 @@
+@import '../../common/vars.scss';
+.queue {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  overflow-x: hidden;
+  background-color: $purple;
+}
+.scrollbar {
+  width: 25px;
+}
+.queue-area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.scroll-area {
+  overflow-x: hidden;
+}
+.queue-header {
+  font-family: $Montserrat;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  font-weight: lighter;
+  font-size: 24px;
+  color: $peach;
+  height: 50px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: $dark-purple;
+}

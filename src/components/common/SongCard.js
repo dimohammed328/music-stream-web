@@ -20,10 +20,14 @@ class SongCard extends Component {
   }
   render() {
     let image;
-    if (this.state.hovered) {
-      image = <Play />;
+    if (this.props.type === 'QUEUE') {
+      image = <div className="number">{this.props.id}</div>;
     } else {
-      image = <Music />;
+      if (this.state.hovered) {
+        image = <Play />;
+      } else {
+        image = <Music />;
+      }
     }
     return (
       <div
